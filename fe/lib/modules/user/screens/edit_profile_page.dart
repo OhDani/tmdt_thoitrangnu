@@ -43,7 +43,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
     super.dispose();
   }
 
-  // ✅ CHỌN ẢNH TỪ GALLERY
+  // CHỌN ẢNH TỪ GALLERY
   Future<void> _pickImageFromGallery() async {
     try {
       final XFile? pickedFile = await _picker.pickImage(

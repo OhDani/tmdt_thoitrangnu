@@ -15,6 +15,7 @@ import 'modules/user/providers/order_provider.dart';
 import 'modules/user/providers/review_provider.dart';
 import 'modules/user/providers/voucher_provider.dart';
 import 'modules/user/providers/wishlist_provider.dart';
+import 'modules/user/providers/image_search_provider.dart';
 import 'modules/user/screens/cart_page.dart';
 import 'modules/user/screens/checkout_page.dart';
 import 'modules/user/user_main_page.dart';
@@ -192,6 +193,7 @@ class _MyAppState extends State<MyApp> {
         ChangeNotifierProvider(create: (_) => OrderProvider()),
         ChangeNotifierProvider(create: (_) => VoucherProvider()),
         ChangeNotifierProvider(create: (_) => ReviewProvider()),
+        ChangeNotifierProvider(create: (_) => ImageSearchProvider()),
         ChangeNotifierProxyProvider<AuthProvider, AddressProvider>(
           create: (_) => AddressProvider(AuthProvider()),
           update: (_, auth, __) => AddressProvider(auth),

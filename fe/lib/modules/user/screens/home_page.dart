@@ -17,6 +17,7 @@ import '../widgets/home/home_app_bar.dart';
 import '../widgets/home/featured_product_card.dart';
 import '../widgets/home/category_chips.dart';
 import 'cart_page.dart';
+import 'image_search_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -236,6 +237,29 @@ class _HomePageState extends State<HomePage>
                 border: InputBorder.none,
               ),
               style: const TextStyle(fontSize: 15),
+            ),
+          ),
+          // Nút tìm kiếm bằng hình ảnh AI
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => const ImageSearchPage(),
+                ),
+              );
+            },
+            child: Container(
+              padding: const EdgeInsets.all(6),
+              decoration: BoxDecoration(
+                color: AppColors.primary.withOpacity(0.1),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: const Icon(
+                Icons.camera_enhance_outlined,
+                color: AppColors.primary,
+                size: 22,
+              ),
             ),
           ),
         ],

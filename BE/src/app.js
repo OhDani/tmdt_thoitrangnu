@@ -19,6 +19,7 @@ import notificationRoutes from "./routes/notification.routes.js";
 import adminUserRoutes from "./routes/admin_users.routes.js";
 import paymentRoutes from "./routes/payment.routes.js";
 import paymentIntentRoutes from "./routes/payment_intent.routes.js";
+import imageSearchRoutes from "./routes/imageSearch.routes.js";
 
 const app = express();
 
@@ -48,5 +49,6 @@ app.use("/api/voucher", voucherRoutes);
 app.use("/api/notifications", notificationRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/payment/intent", paymentIntentRoutes);
+app.use("/api/products", imageSearchRoutes);
 
 export default app;

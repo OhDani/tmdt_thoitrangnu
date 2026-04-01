@@ -2,7 +2,7 @@
 class ApiConfig {
   // nếu chạy trên mobile emulator: dùng IP máy dev hoặc tunnel.
   // ví dụ khi backend chạy local và test trên Android emulator: 10.0.2.2
-  static const String BASE_URL = "http://192.168.1.5:3000"; //chỉnh theo môi trường
+  static const String BASE_URL = "http://192.168.1.8:3000"; //chỉnh theo môi trường
   // Auth
   static const String AUTH_LOGIN = "/api/auth/login";
   static const String AUTH_REGISTER = "/api/auth/register";
@@ -74,5 +74,8 @@ class ApiConfig {
   static const String PAYMENT_INTENT_PENDING_PAID = "/api/payment/intent/pending-paid";
   // THÊM MỚI - ORDER FROM INTENT
   static const String ORDERS_FROM_INTENT = "/api/orders/create-from-intent";
+
+  // AI Image Search
+  static const String SEARCH_BY_IMAGE = "/api/products/search-by-image";
 
 }
